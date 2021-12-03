@@ -1,0 +1,12 @@
+<template>
+    <lightning-layout horizontal-align="center" vertical-align="end">
+        <lightning-layout-item padding="horizontal-small">
+            <lightning-combobox value={selectedCourseLevel} options={courseLevelOptions} onchange={onCourseLevelChange} disabled={courseLevelOptionsDisabled}></lightning-combobox>
+            <lightning-combobox value={selectedCoursePosition} options={coursePositionOptions} onchange={onCoursePositionChange} disabled={courseLevelOptionsDisabled}></lightning-combobox>
+        </lightning-layout-item>
+
+        <lightning-layout-item padding="horizontal-small">
+            <lightning-button label="Search" variant="brand" onclick={onFormSubmit}></lightning-button>
+        </lightning-layout-item>
+    </lightning-layout>
+</template>

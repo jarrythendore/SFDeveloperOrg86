@@ -1,0 +1,12 @@
+<template>
+    <lightning-card title="Insert a New Invoice">
+        <lightning-record-form
+            object-api-name={objAPIName}
+            fields={customF}
+            onsuccess={createInvoice}>
+        </lightning-record-form>
+    </lightning-card>
+    <lightning-card>
+        <c-lwcpj0004invoicelist invoice-record={invoiceRecord}></c-lwcpj0004invoicelist>
+    </lightning-card>
+</template>

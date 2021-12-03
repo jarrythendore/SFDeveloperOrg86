@@ -1,0 +1,12 @@
+<template>
+    <template if:false={courseEmpty}>
+        <div class="result-layout">
+            <template for:each={courses} for:item="course">
+                <div key={course.Id} class="result-layout-item">
+                    <c-pj001coursetile course={course} onselect={onCourseSelect}></c-pj001coursetile>
+                    <!-- <div>{course.Name}</div> -->
+                </div>
+            </template>
+        </div>
+    </template>
+</template>

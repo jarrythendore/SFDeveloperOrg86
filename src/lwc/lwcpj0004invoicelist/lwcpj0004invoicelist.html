@@ -1,0 +1,93 @@
+<!--
+<template>
+    <lightning-datatable
+            data={invoiceList}
+            columns={columns}
+            key-field="id"
+            onrowselection={getSelectedName}
+            onrowaction={handleInvoiceDelete}>
+    </lightning-datatable>
+</template>
+-->
+
+
+<template>
+    record:
+    <template if:true={invoiceRecord}>
+        <div class="slds-m-around_medium">
+            <p>{invoiceRecord}</p>
+        </div>
+    </template>
+    
+    <table border="2" cellspacing="3" cellpadding="5" style="border-collapse:collapse;" class="tblColPad">
+        <tr>
+            <th>Invoice Name</th>
+            <th>Invoice Tax</th>
+            <th>Registration Id</th>
+            <th>Action</th>
+        </tr>
+        
+        <template if:true={invoiceList}>
+            <template for:each={invoiceList} for:item="invoice" for:index="index">
+                <tr key={invoice.Id}>
+                <td>{invoice.Name}</td>
+                <td>{invoice.Tax_Amount__c}</td>
+                <td>{invoice.Tax_Registration_Id__c}</td>
+                <td><lightning-button label="Delete" variant="destructive" onclick={deleteInvoiceRecord} value={invoice.Id}></lightning-button></td>
+                </tr>
+ 
+            </template>
+        </template>
+    </table>
+</template>
+
+<!--
+<template>
+    <lightning-layout>
+        <div class="flex-container">
+            <template for:each={invoiceList} for:item="inv">
+                <lightning-layout-item size="4" padding="around-small" key={inv.Id}>
+                    <lightning-card  title={inv.Name}>
+                        <p class="slds-p-horizontal_small">TaxId: {inv.Tax_Registration_Id__c}</p>
+                        <p class="slds-p-horizontal_small">TaxId: 
+                            <lightning-formatted-number value={inv.Tax_Amount__c} format-style="currency" currency-code="USD">
+                            </lightning-formatted-number></p>
+                        </p>
+                        <p slot="footer">
+                            <lightning-button label="Delete" variant="destructive" slot="actions"
+                                value={inv.Id} onclick={deleteInvoiceRecord}></lightning-button>
+                        </p>
+                    </lightning-card>
+                </lightning-layout-item>
+            </template>
+        </div>
+    </lightning-layout>
+</template>
+-->
+
+
+<!--
+<template>
+	<lightning-card title="Invoices" icon-name="utility:animal_and_nature">
+		<div class="slds-card__body_inner">
+			
+			<template if:true={invoiceList.data}>
+				<lightning-layout multiple-rows="false" pull-to-boundary="small">
+					<template for:each={invoiceList.data} for:item="inv">
+						<lightning-layout-item key={inv.Id} size="3" class="slds-var-p-around_x-small">
+							
+							
+                                <p class="slds-var-m-bottom_xx-small">{inv.Name}</p>
+								<p class="slds-var-m-bottom_xx-small">{inv.Tax_Amount__c}</p>
+								<p class="slds-var-m-bottom_xx-small">{inv.Tax_Registration_Id__c}</p>
+							
+							
+						</lightning-layout-item>
+					</template>
+				</lightning-layout>
+			</template>
+			
+		</div>
+	</lightning-card>
+</template>
+-->
