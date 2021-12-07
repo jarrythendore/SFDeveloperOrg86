@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="735003c0-e35b-4477-a85a-a1892993e8c8" name="Changes" comment="" />
+    <list default="true" id="735003c0-e35b-4477-a85a-a1892993e8c8" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/src/classes/ACAMSCaseHourSettingController.cls" beforeDir="false" afterPath="$PROJECT_DIR$/src/classes/ACAMSCaseHourSettingController.cls" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -67,5 +69,6 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
 </project>
